@@ -22,8 +22,11 @@
   .lang.active{display:block}
 
   /* Hero / id band (full width) */
-  .idband{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .idband{display:grid;grid-template-columns:236px 1fr;gap:40px;align-items:start}
   .photo-ph{width:96px;height:96px;border-radius:50%;background:var(--chip);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:760;font-size:30px;letter-spacing:.02em;flex:0 0 auto}
+  .photo{width:190px;height:190px;border-radius:50%;object-fit:cover;object-position:center 20%;border:1px solid var(--rule);justify-self:center;display:block;background:var(--chip)}
+  .idbody{flex:1;min-width:260px}
+  .idrow{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap}
   .idtext{flex:1;min-width:200px}
   .name{font-size:36px;font-weight:760;letter-spacing:-.02em;line-height:1.05}
   .title{margin-top:5px;font-size:15.5px;font-weight:600;color:var(--accent)}
@@ -31,7 +34,7 @@
   .langswitch button{font:inherit;font-size:12px;font-weight:680;letter-spacing:.04em;color:var(--muted);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:5px 12px;cursor:pointer;transition:all .15s}
   .langswitch button:hover{border-color:var(--accent);color:var(--accent)}
   .langswitch button.on{background:var(--accent);border-color:var(--accent);color:#fff}
-  .tagline{margin-top:18px;font-size:16.5px;color:var(--muted);max-width:74ch}
+  .tagline{margin-top:14px;font-size:16.5px;color:var(--muted)}
 
   /* Two columns */
   .cols{display:grid;grid-template-columns:236px 1fr;gap:40px;align-items:start;margin-top:30px}
@@ -73,6 +76,7 @@
     .wrap{padding:36px 22px 48px}
     .name{font-size:28px}
     .cols{grid-template-columns:1fr;gap:8px}
+    .idband{grid-template-columns:1fr;gap:18px}
     .col-side,.col-main{grid-column:auto;grid-row:auto}
     .col-main{margin-bottom:24px}
     .langswitch{margin-left:auto}
@@ -87,9 +91,11 @@
     a{color:var(--ink);border:0}
     .langswitch,footer{display:none}
     .chip,.photo-ph{background:transparent}
+    .photo{width:112px;height:112px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     h2,.title,.sk-k{color:#000}
     li::before{background:#000}
     .cols{grid-template-columns:196px 1fr;gap:22px;margin-top:18px}
+    .idband{grid-template-columns:196px 1fr;gap:22px}
     .cols section{margin-bottom:15px}
     .entry{margin-bottom:11px}
   }
@@ -101,18 +107,22 @@
   <!-- ==================== ENGLISH ==================== -->
   <div class="lang lang-en active">
     <div class="idband">
-      <div class="photo-ph">VL</div>
-      <div class="idtext">
-        <div class="name">Valentin Lapchevskiy</div>
-        <div class="title">AI-Native Product Engineer — full-stack + LLM / agent systems, end-to-end</div>
-      </div>
-      <div class="langswitch">
-        <button data-l="en" class="on" onclick="setLang('en')">EN</button>
-        <button data-l="ru" onclick="setLang('ru')">RU</button>
-        <button data-l="es" onclick="setLang('es')">ES</button>
+      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy" width="190" height="190">
+      <div class="idbody">
+        <div class="idrow">
+          <div class="idtext">
+            <div class="name">Valentin Lapchevskiy</div>
+            <div class="title">AI-Native Product Engineer — full-stack + LLM / agent systems, end-to-end</div>
+          </div>
+          <div class="langswitch">
+            <button data-l="en" class="on" onclick="setLang('en')">EN</button>
+            <button data-l="ru" onclick="setLang('ru')">RU</button>
+            <button data-l="es" onclick="setLang('es')">ES</button>
+          </div>
+        </div>
+        <p class="tagline">I ship full products end-to-end — backend, frontend, and the LLM-agent layer — by orchestrating AI coding agents at team-level throughput.</p>
       </div>
     </div>
-    <p class="tagline">I ship full products end-to-end — backend, frontend, and the LLM-agent layer — by orchestrating AI coding agents at team-level throughput.</p>
 
     <div class="cols">
       <main class="col-main">
@@ -133,9 +143,17 @@
             <div class="entry-head"><span class="entry-title">Agentic Support System</span><span class="entry-date">2026</span></div>
             <div class="entry-meta">Contract · AI Engineer · <span class="nda">B2B GPU-infrastructure company, under NDA</span></div>
             <ul>
-              <li>Built an end-to-end <b>LLM-agent support system</b> (Vercel AI SDK, OODA tool-calling loop) across Telegram / Email / Web — intent classification, field extraction, automated ticketing (~120K LOC).</li>
+              <li>Built an end-to-end <b>LLM-agent support system</b> (Vercel AI SDK, OODA tool-calling loop) across Telegram / Email / Web — intent classification, field extraction, automated ticketing; delivered in < 2 months (3 prototypes → production).</li>
               <li>Engineered <b>multimodal intake</b> (vision + Whisper STT) and context-aware memory over PostgreSQL/pgvector + Redis.</li>
               <li>Implemented a <b>self-improving eval loop</b> (45+ real cases → LLM-driven prompt refinement → regression gating in CI) and production infra (Docker, Langfuse, retry queues, graceful shutdown).</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Auditable Corporate-Memory System</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Contract · AI R&amp;D · <span class="nda">B2B GPU-infrastructure company, under NDA</span></div>
+            <ul>
+              <li>Designed and prototyped an <b>auditable corporate-memory system</b> — immutable raw layer + re-creatable structured layer, giving end-to-end provenance from any AI output back to its source.</li>
+              <li>Built <b>LLM knowledge-graph extraction</b> (entities / relations / facts) with pluggable per-domain lenses and type guards over PostgreSQL/pgvector, served via MCP — handed off as a prototype for further development.</li>
             </ul>
           </div>
           <div class="entry">
@@ -144,15 +162,15 @@
             <ul>
               <li>Architected an <b>event-driven backend</b> (Fastify, Temporal.io, 4 microservices) that scrapes, analyzes, and scores short-form video (TikTok / Reels / Shorts).</li>
               <li>Built <b>multimodal video analysis</b> on Gemini structured outputs (hook, pacing, CTA, niche, sentiment) and a <b>7-stage Python ML pipeline</b> (correlation, clustering, anomaly detection → content directives).</li>
-              <li>Stood up production infra: PostgreSQL/Drizzle (20+ tables), Redis Streams, full observability (Prometheus / Grafana / Jaeger), billing &amp; auth.</li>
+              <li>Built production-grade infra: PostgreSQL/Drizzle (20+ tables), Redis Streams, full observability (Prometheus / Grafana / Jaeger), billing &amp; auth.</li>
             </ul>
           </div>
           <div class="entry">
             <div class="entry-head"><span class="entry-title">Noracle — AI Dream-Interpretation SaaS</span><span class="entry-date">2026</span></div>
             <div class="entry-meta">Founder / Solo Engineer · <a href="https://t.me/NocturnalOracleBot">Live demo ↗</a></div>
             <ul>
-              <li>Shipped a <b>live, monetized</b> Telegram AI product (Telegram Stars billing; <b>38% D30 retention</b> among paying users).</li>
-              <li>Designed a <b>5-stage LLM pipeline</b> (Gemini↔OpenAI fallback, per-tier cost guards, Zod-validated structured outputs).</li>
+              <li>Shipped a <b>live, monetized</b> Telegram AI product — dream interpretation plus an evolving per-user personality profile (Telegram Stars billing; <b>38% D30 retention</b> among paying users).</li>
+              <li>Built a <b>multi-stage LLM pipeline</b> — agentic mode routing, multi-provider image generation, per-tier cost guards, structured outputs (~$0.02/dream).</li>
               <li>Executed a <b>zero-downtime, idempotent migration</b> of 3,485 users / 6,340 records with cold-backup safety.</li>
             </ul>
           </div>
@@ -211,14 +229,23 @@
           <ul class="facts">
             <li><b>7M-user</b> app · Apple App of the Year</li>
             <li><b>$300K+</b> · 61 projects · Top Rated</li>
-            <li><b>6</b> AI systems shipped (2024–26)</li>
+            <li><b>5</b> AI systems + research (2024–26)</li>
             <li>Agent-native delivery</li>
           </ul>
         </section>
+        <section><h2>How I Work</h2>
+          <ul class="facts">
+            <li>Turn vague scope into <b>shipped systems</b> — own ambiguity end-to-end.</li>
+            <li><b>Systems-first</b>: map the path and trade-offs before writing code.</li>
+            <li><b>Relentless prototyper</b> — turn ideas into working experiments, fast.</li>
+            <li>Calm under shifting requirements; <b>low-overhead</b> remote collaboration.</li>
+          </ul>
+        </section>
         <section><h2>Skills</h2>
-          <div class="sk"><div class="sk-k">AI / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
+          <div class="sk"><div class="sk-k">AI / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, cost-aware LLM engineering (cost ledgers, per-tier guards), LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
           <div class="sk"><div class="sk-k">Backend</div><div class="sk-v">Node.js / TypeScript, Fastify / Express, Temporal.io, Redis / BullMQ, PostgreSQL (Drizzle, pgvector), MongoDB.</div></div>
           <div class="sk"><div class="sk-k">Frontend</div><div class="sk-v">React, Vue / Nuxt, TypeScript, Tailwind, design systems, FSD.</div></div>
+          <div class="sk"><div class="sk-k">Mobile</div><div class="sk-v">React Native, Flutter, Electron.</div></div>
           <div class="sk"><div class="sk-k">Data / ML</div><div class="sk-v">Python, PyTorch, scikit-learn, data pipelines, scraping.</div></div>
           <div class="sk"><div class="sk-k">Infra</div><div class="sk-v">Docker, CI/CD, observability (Prometheus / Grafana / Jaeger / OTel), GCP / AWS.</div></div>
           <div class="sk"><div class="sk-k">Also</div><div class="sk-v">Solidity / Web3; creative tech (TouchDesigner, GLSL/HLSL).</div></div>
@@ -236,18 +263,22 @@
   <!-- ==================== РУССКИЙ ==================== -->
   <div class="lang lang-ru">
     <div class="idband">
-      <div class="photo-ph">VL</div>
-      <div class="idtext">
-        <div class="name">Valentin Lapchevskiy</div>
-        <div class="title">AI-Native Product Engineer — full-stack + LLM / агентные системы, end-to-end</div>
-      </div>
-      <div class="langswitch">
-        <button data-l="en" onclick="setLang('en')">EN</button>
-        <button data-l="ru" class="on" onclick="setLang('ru')">RU</button>
-        <button data-l="es" onclick="setLang('es')">ES</button>
+      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy" width="190" height="190">
+      <div class="idbody">
+        <div class="idrow">
+          <div class="idtext">
+            <div class="name">Valentin Lapchevskiy</div>
+            <div class="title">AI-Native Product Engineer — full-stack + LLM / агентные системы, end-to-end</div>
+          </div>
+          <div class="langswitch">
+            <button data-l="en" onclick="setLang('en')">EN</button>
+            <button data-l="ru" class="on" onclick="setLang('ru')">RU</button>
+            <button data-l="es" onclick="setLang('es')">ES</button>
+          </div>
+        </div>
+        <p class="tagline">Собираю продукты целиком — backend, frontend и LLM-слой — оркестрируя кодинг-агентов с производительностью команды.</p>
       </div>
     </div>
-    <p class="tagline">Собираю продукты целиком — backend, frontend и LLM-слой — оркестрируя кодинг-агентов с производительностью команды.</p>
 
     <div class="cols">
       <main class="col-main">
@@ -268,9 +299,17 @@
             <div class="entry-head"><span class="entry-title">Agentic-система поддержки</span><span class="entry-date">2026</span></div>
             <div class="entry-meta">Контракт · AI-инженер · <span class="nda">B2B-компания (GPU-инфраструктура), под NDA</span></div>
             <ul>
-              <li>Построил end-to-end <b>систему поддержки на LLM-агентах</b> (Vercel AI SDK, OODA tool-calling loop) для Telegram / Email / Web — классификация intent, извлечение полей, авто-тикетинг (~120K LOC).</li>
+              <li>Построил end-to-end <b>систему поддержки на LLM-агентах</b> (Vercel AI SDK, OODA tool-calling loop) для Telegram / Email / Web — классификация intent, извлечение полей, авто-тикетинг; собрано за < 2 месяцев (3 прототипа → production).</li>
               <li>Реализовал <b>мультимодальный ввод</b> (vision + Whisper STT) и контекстную память поверх PostgreSQL/pgvector + Redis.</li>
               <li>Внедрил <b>самоулучшающийся eval-loop</b> (45+ реальных кейсов → LLM-правка промптов → regression-гейтинг в CI) и production-инфру (Docker, Langfuse, retry-очереди, graceful shutdown).</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Аудируемая система корпоративной памяти</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Контракт · AI R&amp;D · <span class="nda">B2B-компания (GPU-инфраструктура), под NDA</span></div>
+            <ul>
+              <li>Спроектировал и прототипировал <b>аудируемую систему корпоративной памяти</b> — неизменяемый raw-слой + пересоздаваемый structured-слой, дающие сквозной provenance от любого AI-вывода к первоисточнику.</li>
+              <li>Построил <b>LLM-извлечение knowledge-graph</b> (сущности / связи / факты) с подключаемыми доменными «призмами» и type-guard'ами поверх PostgreSQL/pgvector, отдача через MCP — передан как прототип для дальнейшей доработки.</li>
             </ul>
           </div>
           <div class="entry">
@@ -279,15 +318,15 @@
             <ul>
               <li>Спроектировал <b>event-driven backend</b> (Fastify, Temporal.io, 4 микросервиса), который скрейпит, анализирует и оценивает короткие видео (TikTok / Reels / Shorts).</li>
               <li>Построил <b>мультимодальный анализ видео</b> на Gemini structured outputs (хук, пейсинг, CTA, ниша, sentiment) и <b>7-уровневый Python ML-пайплайн</b> (корреляции, кластеризация, детекция аномалий → контент-рекомендации).</li>
-              <li>Поднял production-инфру: PostgreSQL/Drizzle (20+ таблиц), Redis Streams, полный observability (Prometheus / Grafana / Jaeger), биллинг и auth.</li>
+              <li>Построил production-grade инфру: PostgreSQL/Drizzle (20+ таблиц), Redis Streams, полный observability (Prometheus / Grafana / Jaeger), биллинг и auth.</li>
             </ul>
           </div>
           <div class="entry">
             <div class="entry-head"><span class="entry-title">Noracle — AI-SaaS интерпретации снов</span><span class="entry-date">2026</span></div>
             <div class="entry-meta">Founder / Solo Engineer · <a href="https://t.me/NocturnalOracleBot">Живое демо ↗</a></div>
             <ul>
-              <li>Запустил <b>живой монетизированный</b> Telegram-AI-продукт (оплата Telegram Stars; <b>D30-retention 38%</b> среди платящих).</li>
-              <li>Спроектировал <b>5-этапный LLM-пайплайн</b> (fallback Gemini↔OpenAI, per-tier cost-guards, structured outputs на Zod).</li>
+              <li>Запустил <b>живой монетизированный</b> Telegram-AI-продукт — интерпретация снов + развивающийся психо-портрет пользователя (оплата Telegram Stars; <b>D30-retention 38%</b> среди платящих).</li>
+              <li>Собрал <b>многоэтапный LLM-пайплайн</b> — агентный роутинг режимов, мультипровайдерная генерация картинок, per-tier cost-guards, structured outputs (~$0.02/сон).</li>
               <li>Выполнил <b>zero-downtime идемпотентную миграцию</b> 3 485 пользователей / 6 340 записей с cold-backup.</li>
             </ul>
           </div>
@@ -346,14 +385,23 @@
           <ul class="facts">
             <li><b>7M</b> юзеров · Apple App of the Year</li>
             <li><b>$300K+</b> · 61 проект · Top Rated</li>
-            <li><b>6</b> AI-систем (2024–26)</li>
+            <li><b>5</b> AI-систем + research (2024–26)</li>
             <li>Agent-native подход</li>
           </ul>
         </section>
+        <section><h2>Как я работаю</h2>
+          <ul class="facts">
+            <li>Превращаю размытое ТЗ в <b>готовые системы</b> — беру неопределённость на себя.</li>
+            <li><b>Сначала система</b>: карта пути и трейд-оффов до кода.</li>
+            <li><b>Неугомонный прототипировщик</b> — довожу идеи до рабочих экспериментов, быстро.</li>
+            <li>Спокоен при меняющихся требованиях; <b>минимум оверхеда</b>, remote-friendly.</li>
+          </ul>
+        </section>
         <section><h2>Навыки</h2>
-          <div class="sk"><div class="sk-k">AI / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
+          <div class="sk"><div class="sk-k">AI / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, cost-aware LLM engineering (cost ledgers, per-tier guards), LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
           <div class="sk"><div class="sk-k">Backend</div><div class="sk-v">Node.js / TypeScript, Fastify / Express, Temporal.io, Redis / BullMQ, PostgreSQL (Drizzle, pgvector), MongoDB.</div></div>
           <div class="sk"><div class="sk-k">Frontend</div><div class="sk-v">React, Vue / Nuxt, TypeScript, Tailwind, design systems, FSD.</div></div>
+          <div class="sk"><div class="sk-k">Mobile</div><div class="sk-v">React Native, Flutter, Electron.</div></div>
           <div class="sk"><div class="sk-k">Data / ML</div><div class="sk-v">Python, PyTorch, scikit-learn, data pipelines, scraping.</div></div>
           <div class="sk"><div class="sk-k">Infra</div><div class="sk-v">Docker, CI/CD, observability (Prometheus / Grafana / Jaeger / OTel), GCP / AWS.</div></div>
           <div class="sk"><div class="sk-k">Ещё</div><div class="sk-v">Solidity / Web3; creative tech (TouchDesigner, GLSL/HLSL).</div></div>
@@ -371,18 +419,22 @@
   <!-- ==================== ESPAÑOL ==================== -->
   <div class="lang lang-es">
     <div class="idband">
-      <div class="photo-ph">VL</div>
-      <div class="idtext">
-        <div class="name">Valentin Lapchevskiy</div>
-        <div class="title">AI-Native Product Engineer — full-stack + sistemas LLM / agentes, de extremo a extremo</div>
-      </div>
-      <div class="langswitch">
-        <button data-l="en" onclick="setLang('en')">EN</button>
-        <button data-l="ru" onclick="setLang('ru')">RU</button>
-        <button data-l="es" class="on" onclick="setLang('es')">ES</button>
+      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy" width="190" height="190">
+      <div class="idbody">
+        <div class="idrow">
+          <div class="idtext">
+            <div class="name">Valentin Lapchevskiy</div>
+            <div class="title">AI-Native Product Engineer — full-stack + sistemas LLM / agentes, de extremo a extremo</div>
+          </div>
+          <div class="langswitch">
+            <button data-l="en" onclick="setLang('en')">EN</button>
+            <button data-l="ru" onclick="setLang('ru')">RU</button>
+            <button data-l="es" class="on" onclick="setLang('es')">ES</button>
+          </div>
+        </div>
+        <p class="tagline">Entrego productos completos de extremo a extremo — backend, frontend y la capa de agentes LLM — orquestando agentes de programación con el rendimiento de un equipo.</p>
       </div>
     </div>
-    <p class="tagline">Entrego productos completos de extremo a extremo — backend, frontend y la capa de agentes LLM — orquestando agentes de programación con el rendimiento de un equipo.</p>
 
     <div class="cols">
       <main class="col-main">
@@ -403,9 +455,17 @@
             <div class="entry-head"><span class="entry-title">Sistema de soporte con agentes LLM</span><span class="entry-date">2026</span></div>
             <div class="entry-meta">Contrato · Ingeniero de IA · <span class="nda">empresa de infraestructura GPU B2B, bajo NDA</span></div>
             <ul>
-              <li>Construí un <b>sistema de soporte de extremo a extremo con agentes LLM</b> (Vercel AI SDK, bucle OODA con tool-calling) en Telegram / Email / Web — clasificación de intención, extracción de campos y ticketing automatizado (~120K LOC).</li>
+              <li>Construí un <b>sistema de soporte de extremo a extremo con agentes LLM</b> (Vercel AI SDK, bucle OODA con tool-calling) en Telegram / Email / Web — clasificación de intención, extracción de campos y ticketing automatizado; entregado en < 2 meses (3 prototipos → producción).</li>
               <li>Desarrollé <b>entrada multimodal</b> (visión + Whisper STT) y memoria contextual sobre PostgreSQL/pgvector + Redis.</li>
               <li>Implementé un <b>bucle de evaluación auto-mejorable</b> (45+ casos reales → refinamiento de prompts con LLM → gating de regresión en CI) e infraestructura de producción (Docker, Langfuse, colas de reintento, apagado controlado).</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Sistema de memoria corporativa auditable</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Contrato · I+D de IA · <span class="nda">empresa de infraestructura GPU B2B, bajo NDA</span></div>
+            <ul>
+              <li>Diseñé y prototipé un <b>sistema de memoria corporativa auditable</b> — capa raw inmutable + capa estructurada recreable, con procedencia de extremo a extremo desde cualquier salida de IA hasta su fuente.</li>
+              <li>Construí <b>extracción de knowledge-graph con LLM</b> (entidades / relaciones / hechos) con lentes por dominio configurables y type guards sobre PostgreSQL/pgvector, expuesto vía MCP — entregado como prototipo para desarrollo posterior.</li>
             </ul>
           </div>
           <div class="entry">
@@ -414,15 +474,15 @@
             <ul>
               <li>Diseñé un <b>backend orientado a eventos</b> (Fastify, Temporal.io, 4 microservicios) que rastrea, analiza y puntúa vídeo corto (TikTok / Reels / Shorts).</li>
               <li>Construí <b>análisis multimodal de vídeo</b> sobre structured outputs de Gemini (hook, ritmo, CTA, nicho, sentimiento) y un <b>pipeline de ML en Python de 7 etapas</b> (correlación, clustering, detección de anomalías → directrices de contenido).</li>
-              <li>Levanté infraestructura de producción: PostgreSQL/Drizzle (20+ tablas), Redis Streams, observabilidad completa (Prometheus / Grafana / Jaeger), facturación y autenticación.</li>
+              <li>Construí infraestructura de nivel producción: PostgreSQL/Drizzle (20+ tablas), Redis Streams, observabilidad completa (Prometheus / Grafana / Jaeger), facturación y autenticación.</li>
             </ul>
           </div>
           <div class="entry">
             <div class="entry-head"><span class="entry-title">Noracle — SaaS de interpretación de sueños con IA</span><span class="entry-date">2026</span></div>
             <div class="entry-meta">Fundador / Ingeniero en solitario · <a href="https://t.me/NocturnalOracleBot">Demo en vivo ↗</a></div>
             <ul>
-              <li>Lancé un <b>producto de IA en vivo y monetizado</b> en Telegram (facturación con Telegram Stars; <b>38% de retención D30</b> entre usuarios de pago).</li>
-              <li>Diseñé un <b>pipeline LLM de 5 etapas</b> (fallback Gemini↔OpenAI, guardas de coste por tier, structured outputs validados con Zod).</li>
+              <li>Lancé un <b>producto de IA en vivo y monetizado</b> en Telegram — interpretación de sueños + un perfil de personalidad por usuario que evoluciona (facturación con Telegram Stars; <b>38% de retención D30</b> entre usuarios de pago).</li>
+              <li>Construí un <b>pipeline LLM multi-etapa</b> — enrutado agéntico de modos, generación de imágenes multi-proveedor, guardas de coste por tier, structured outputs (~$0.02/sueño).</li>
               <li>Ejecuté una <b>migración idempotente sin downtime</b> de 3.485 usuarios / 6.340 registros con respaldo en frío.</li>
             </ul>
           </div>
@@ -481,14 +541,23 @@
           <ul class="facts">
             <li><b>7M</b> usuarios · Apple App of the Year</li>
             <li><b>$300K+</b> · 61 proyectos · Top Rated</li>
-            <li><b>6</b> sistemas de IA (2024–26)</li>
+            <li><b>5</b> sistemas de IA + investigación (2024–26)</li>
             <li>Entrega agent-native</li>
           </ul>
         </section>
+        <section><h2>Cómo trabajo</h2>
+          <ul class="facts">
+            <li>Convierto un alcance difuso en <b>sistemas entregados</b> — asumo la ambigüedad de principio a fin.</li>
+            <li><b>Primero el sistema</b>: trazo el camino y los trade-offs antes de escribir código.</li>
+            <li><b>Prototipador incansable</b> — convierto ideas en experimentos que funcionan, rápido.</li>
+            <li>Calma ante requisitos cambiantes; <b>bajo overhead</b>, colaboración remota.</li>
+          </ul>
+        </section>
         <section><h2>Habilidades</h2>
-          <div class="sk"><div class="sk-k">IA / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
+          <div class="sk"><div class="sk-k">IA / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, cost-aware LLM engineering (cost ledgers, per-tier guards), LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
           <div class="sk"><div class="sk-k">Backend</div><div class="sk-v">Node.js / TypeScript, Fastify / Express, Temporal.io, Redis / BullMQ, PostgreSQL (Drizzle, pgvector), MongoDB.</div></div>
           <div class="sk"><div class="sk-k">Frontend</div><div class="sk-v">React, Vue / Nuxt, TypeScript, Tailwind, design systems, FSD.</div></div>
+          <div class="sk"><div class="sk-k">Mobile</div><div class="sk-v">React Native, Flutter, Electron.</div></div>
           <div class="sk"><div class="sk-k">Datos / ML</div><div class="sk-v">Python, PyTorch, scikit-learn, data pipelines, scraping.</div></div>
           <div class="sk"><div class="sk-k">Infra</div><div class="sk-v">Docker, CI/CD, observability (Prometheus / Grafana / Jaeger / OTel), GCP / AWS.</div></div>
           <div class="sk"><div class="sk-k">Además</div><div class="sk-v">Solidity / Web3; creative tech (TouchDesigner, GLSL/HLSL).</div></div>
