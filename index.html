@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valentin Lapchevskiy — AI-Native Product Engineer</title>
+<meta name="description" content="AI-native product engineer — full-stack + LLM/agent systems. Co-founder of App in the Air (7M users, Apple App of the Year). Top-Rated, $300K+ on Upwork.">
+<style>
+  /* THEME — change accent in ONE place. Presets: Teal #0f766e · Indigo #5b4bdb · Blue #1d4ed8 · Emerald #047857 · Amber #b45309 · Rose #be123c */
+  :root{
+    --accent:#0f766e;--ink:#17171b;--muted:#5b5b66;--faint:#8a8a95;
+    --paper:#fdfdfb;--rule:#e6e6ea;--chip:rgba(15,118,110,.08);--maxw:880px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:56px 40px 64px}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+  a:hover{border-color:var(--accent)}
+
+  .lang{display:none}
+  .lang.active{display:block}
+
+  /* Hero / id band (full width) */
+  .idband{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .photo-ph{width:96px;height:96px;border-radius:50%;background:var(--chip);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:760;font-size:30px;letter-spacing:.02em;flex:0 0 auto}
+  .idtext{flex:1;min-width:200px}
+  .name{font-size:36px;font-weight:760;letter-spacing:-.02em;line-height:1.05}
+  .title{margin-top:5px;font-size:15.5px;font-weight:600;color:var(--accent)}
+  .langswitch{display:flex;gap:5px;align-self:flex-start}
+  .langswitch button{font:inherit;font-size:12px;font-weight:680;letter-spacing:.04em;color:var(--muted);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:5px 12px;cursor:pointer;transition:all .15s}
+  .langswitch button:hover{border-color:var(--accent);color:var(--accent)}
+  .langswitch button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .tagline{margin-top:18px;font-size:16.5px;color:var(--muted);max-width:74ch}
+
+  /* Two columns */
+  .cols{display:grid;grid-template-columns:236px 1fr;gap:40px;align-items:start;margin-top:30px}
+  .col-side{grid-column:1;grid-row:1}
+  .col-main{grid-column:2;grid-row:1}
+  .cols section{margin:0 0 24px}
+  .cols section:last-child{margin-bottom:0}
+
+  h2{font-size:12px;font-weight:720;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  h2::after{content:"";flex:1;height:1px;background:var(--rule)}
+  .summary{font-size:15px;color:#2b2b32}
+
+  .entry{margin-bottom:18px;break-inside:avoid}
+  .entry:last-child{margin-bottom:0}
+  .entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+  .entry-title{font-size:15px;font-weight:680;letter-spacing:-.01em}
+  .entry-date{font-size:12.5px;color:var(--faint);font-weight:560;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .entry-meta{font-size:13px;color:var(--muted);margin-top:2px}
+  .entry-meta .nda{color:var(--faint);font-style:italic}
+  ul{margin-top:8px;padding-left:0;list-style:none}
+  li{position:relative;padding-left:17px;margin-bottom:5px;font-size:13.5px;color:#33333a}
+  li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.55}
+  b,strong{font-weight:660;color:var(--ink)}
+
+  /* Sidebar bits */
+  .side-contact{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted)}
+  .side-contact .loc{color:var(--ink);font-weight:560}
+  .facts li{font-size:13px;margin-bottom:7px}
+  .sk{margin-bottom:13px}
+  .sk:last-child{margin-bottom:0}
+  .sk-k{font-size:11px;font-weight:720;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:3px}
+  .sk-v{font-size:12.5px;color:#33333a;line-height:1.5}
+  .plain{font-size:13px;color:#33333a}
+  .plain + .plain{margin-top:5px}
+
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--rule);font-size:12px;color:var(--faint)}
+
+  @media (max-width:760px){
+    .wrap{padding:36px 22px 48px}
+    .name{font-size:28px}
+    .cols{grid-template-columns:1fr;gap:8px}
+    .col-side,.col-main{grid-column:auto;grid-row:auto}
+    .col-main{margin-bottom:24px}
+    .langswitch{margin-left:auto}
+    .entry-head{flex-direction:column;gap:1px}
+    .entry-date{order:2}
+  }
+
+  @media print{
+    @page{margin:12mm}
+    body{background:#fff;font-size:10pt;line-height:1.4}
+    .wrap{max-width:100%;padding:0}
+    a{color:var(--ink);border:0}
+    .langswitch,footer{display:none}
+    .chip,.photo-ph{background:transparent}
+    h2,.title,.sk-k{color:#000}
+    li::before{background:#000}
+    .cols{grid-template-columns:196px 1fr;gap:22px;margin-top:18px}
+    .cols section{margin-bottom:15px}
+    .entry{margin-bottom:11px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ==================== ENGLISH ==================== -->
+  <div class="lang lang-en active">
+    <div class="idband">
+      <div class="photo-ph">VL</div>
+      <div class="idtext">
+        <div class="name">Valentin Lapchevskiy</div>
+        <div class="title">AI-Native Product Engineer — full-stack + LLM / agent systems, end-to-end</div>
+      </div>
+      <div class="langswitch">
+        <button data-l="en" class="on" onclick="setLang('en')">EN</button>
+        <button data-l="ru" onclick="setLang('ru')">RU</button>
+        <button data-l="es" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+    <p class="tagline">I ship full products end-to-end — backend, frontend, and the LLM-agent layer — by orchestrating AI coding agents at team-level throughput.</p>
+
+    <div class="cols">
+      <main class="col-main">
+        <section><h2>Summary</h2>
+          <p class="summary">AI-native product engineer who ships full systems end-to-end — backend, frontend, and the LLM-agent layer — by orchestrating AI coding agents at team-level throughput. 15 years building products: co-founder of <b>App in the Air</b> (7M users, <b>Apple App of the Year</b>) and a <b>Top-Rated</b> freelancer with <b>$300K+ across 61 projects</b> (~100% success). Recent focus: production agentic systems, multimodal LLM pipelines, and AI interpretability.</p>
+        </section>
+        <section><h2>How I Work</h2>
+          <p class="summary">I operate as a one-person product team: I orchestrate AI coding agents to design, build, and ship — delegating execution and steering for quality and speed, delivering at the scale of a full team.</p>
+        </section>
+        <section><h2>Selected Work</h2>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">B2B Brand-Creator Marketing Platform</span><span class="entry-date">2026 – present</span></div>
+            <div class="entry-meta">Contract · Senior Full-Stack / AI Engineer · <span class="nda">under NDA</span></div>
+            <ul>
+              <li>Architecting a <b>Temporal-based workflow engine</b> and an <b>AI provider control plane</b> (cost ledger, rate limiting, circuit breakers, webhook replay) powering a multi-domain platform.</li>
+              <li>Established a <b>domain-driven monorepo</b> (portable platform core + business domains) with P0–P5 smoke gates and full observability (Grafana / Loki / Alloy).</li>
+              <li>Building a <b>skills-based LLM generation system</b> (18+ domain skills — brand enrichment, brief/script generation, anti-fraud) with guardrails and quality evals.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Agentic Support System</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Contract · AI Engineer · <span class="nda">B2B GPU-infrastructure company, under NDA</span></div>
+            <ul>
+              <li>Built an end-to-end <b>LLM-agent support system</b> (Vercel AI SDK, OODA tool-calling loop) across Telegram / Email / Web — intent classification, field extraction, automated ticketing (~120K LOC).</li>
+              <li>Engineered <b>multimodal intake</b> (vision + Whisper STT) and context-aware memory over PostgreSQL/pgvector + Redis.</li>
+              <li>Implemented a <b>self-improving eval loop</b> (45+ real cases → LLM-driven prompt refinement → regression gating in CI) and production infra (Docker, Langfuse, retry queues, graceful shutdown).</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Viracle — AI Video-Virality Analytics</span><span class="entry-date">2025 – 2026</span></div>
+            <div class="entry-meta">Founder / Solo Engineer</div>
+            <ul>
+              <li>Architected an <b>event-driven backend</b> (Fastify, Temporal.io, 4 microservices) that scrapes, analyzes, and scores short-form video (TikTok / Reels / Shorts).</li>
+              <li>Built <b>multimodal video analysis</b> on Gemini structured outputs (hook, pacing, CTA, niche, sentiment) and a <b>7-stage Python ML pipeline</b> (correlation, clustering, anomaly detection → content directives).</li>
+              <li>Stood up production infra: PostgreSQL/Drizzle (20+ tables), Redis Streams, full observability (Prometheus / Grafana / Jaeger), billing &amp; auth.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Noracle — AI Dream-Interpretation SaaS</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Founder / Solo Engineer · <a href="https://t.me/NocturnalOracleBot">Live demo ↗</a></div>
+            <ul>
+              <li>Shipped a <b>live, monetized</b> Telegram AI product (Telegram Stars billing; <b>38% D30 retention</b> among paying users).</li>
+              <li>Designed a <b>5-stage LLM pipeline</b> (Gemini↔OpenAI fallback, per-tier cost guards, Zod-validated structured outputs).</li>
+              <li>Executed a <b>zero-downtime, idempotent migration</b> of 3,485 users / 6,340 records with cold-backup safety.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Independent AI Research — Interpretability &amp; Efficient Architectures</span><span class="entry-date">2025 – 2026</span></div>
+            <div class="entry-meta">Self-directed</div>
+            <ul>
+              <li>200+ experiments on extracting <b>exact, verifiable logic</b> from trained networks (lossless NN → formula → Verilog), vs. approximate methods (SHAP/LIME).</li>
+              <li>Notable results: parity-128 in <b>40 parameters</b>; a GPT-2 reasoning-coprocessor adapter lifting 8-bit arithmetic from <b>0%→97% at 0.08% of parameters</b>; <b>131× FHE</b> inference speedup.</li>
+              <li>Rigorous methodology (multi-seed, Bonferroni correction, 3 verification rounds) with a documented falsified-hypotheses log.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">GRAB-A-WORD-II — Real-time Multiplayer Word Game</span><span class="entry-date">2024</span></div>
+            <div class="entry-meta">Founder / Solo Engineer</div>
+            <ul>
+              <li>Built a solo <b>full-stack real-time multiplayer</b> game (Nuxt/Vue, Socket.io, Redis/BullMQ) with RU/EN localization and Telegram integration.</li>
+              <li>Created a modular design system (Storybook, 26 components) and an Apify + OpenAI dictionary pipeline across a 10-module monorepo.</li>
+            </ul>
+          </div>
+        </section>
+        <section><h2>Experience</h2>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Independent Full-Stack Engineer &amp; Product Consultant</span><span class="entry-date">2015 – present</span></div>
+            <div class="entry-meta">Upwork · Top Rated</div>
+            <ul>
+              <li><b>$300K+ earned across 61 projects / 4,446 hours, ~100% success</b>; clients primarily in the US, Canada, and Europe.</li>
+              <li>30+ MVPs and proofs-of-concept; deep involvement in product decisions and technical advising.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Co-founder · Product &amp; Full-Stack Engineer</span><span class="entry-date">2011 – 2014</span></div>
+            <div class="entry-meta">Empatika — App in the Air</div>
+            <ul><li>Co-founded a travel-assistant app: <b>7M users, Apple App of the Year</b>, Editors' Choice, preinstalled across Apple Stores worldwide.</li></ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Creative Technologist · Visual Programmer</span><span class="entry-date">2008 – 2015</span></div>
+            <div class="entry-meta">INTY · TNT Broadcast Network</div>
+            <ul><li>Interactive installations and real-time visual systems (TouchDesigner, Ventuz, GLSL, Arduino).</li></ul>
+          </div>
+        </section>
+      </main>
+
+      <aside class="col-side">
+        <section><h2>Contact</h2>
+          <div class="side-contact">
+            <span class="loc">Argentina · UTC-3</span>
+            <span>Remote · US-hours overlap</span>
+            <a href="mailto:v.lapchevskiy@gmail.com">v.lapchevskiy@gmail.com</a>
+            <a href="https://t.me/gen4sp">Telegram @gen4sp</a>
+            <a href="https://www.upwork.com/fl/valentinel">Upwork — Top Rated</a>
+            <a href="https://www.crunchbase.com/organization/app-in-the-air">App in the Air ↗</a>
+          </div>
+        </section>
+        <section><h2>Highlights</h2>
+          <ul class="facts">
+            <li><b>7M-user</b> app · Apple App of the Year</li>
+            <li><b>$300K+</b> · 61 projects · Top Rated</li>
+            <li><b>6</b> AI systems shipped (2024–26)</li>
+            <li>Agent-native delivery</li>
+          </ul>
+        </section>
+        <section><h2>Skills</h2>
+          <div class="sk"><div class="sk-k">AI / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
+          <div class="sk"><div class="sk-k">Backend</div><div class="sk-v">Node.js / TypeScript, Fastify / Express, Temporal.io, Redis / BullMQ, PostgreSQL (Drizzle, pgvector), MongoDB.</div></div>
+          <div class="sk"><div class="sk-k">Frontend</div><div class="sk-v">React, Vue / Nuxt, TypeScript, Tailwind, design systems, FSD.</div></div>
+          <div class="sk"><div class="sk-k">Data / ML</div><div class="sk-v">Python, PyTorch, scikit-learn, data pipelines, scraping.</div></div>
+          <div class="sk"><div class="sk-k">Infra</div><div class="sk-v">Docker, CI/CD, observability (Prometheus / Grafana / Jaeger / OTel), GCP / AWS.</div></div>
+          <div class="sk"><div class="sk-k">Also</div><div class="sk-v">Solidity / Web3; creative tech (TouchDesigner, GLSL/HLSL).</div></div>
+        </section>
+        <section><h2>Education &amp; Languages</h2>
+          <p class="plain"><b>BSc, Applied Informatics</b><br>Russian University of Cooperation (2000–2005).</p>
+          <p class="plain">English (professional) · Russian (native) · Spanish (B1, in progress).</p>
+        </section>
+      </aside>
+    </div>
+    <footer>Valentin Lapchevskiy · AI-Native Product Engineer · Open to select contract &amp; fractional engagements — remote.</footer>
+  </div>
+
+  <!-- ==================== РУССКИЙ ==================== -->
+  <div class="lang lang-ru">
+    <div class="idband">
+      <div class="photo-ph">VL</div>
+      <div class="idtext">
+        <div class="name">Valentin Lapchevskiy</div>
+        <div class="title">AI-Native Product Engineer — full-stack + LLM / агентные системы, end-to-end</div>
+      </div>
+      <div class="langswitch">
+        <button data-l="en" onclick="setLang('en')">EN</button>
+        <button data-l="ru" class="on" onclick="setLang('ru')">RU</button>
+        <button data-l="es" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+    <p class="tagline">Собираю продукты целиком — backend, frontend и LLM-слой — оркестрируя кодинг-агентов с производительностью команды.</p>
+
+    <div class="cols">
+      <main class="col-main">
+        <section><h2>Кратко</h2>
+          <p class="summary">AI-native продуктовый инженер: собираю системы целиком — backend, frontend и LLM/агентный слой — оркестрируя кодинг-агентов с производительностью команды. 15 лет строю продукты: co-founder <b>App in the Air</b> (7M пользователей, <b>Apple App of the Year</b>) и <b>Top-Rated</b> фрилансер с <b>$300K+ за 61 проект</b> (~100% success). Текущий фокус: production-системы на LLM-агентах, мультимодальные LLM-пайплайны, интерпретируемость ИИ.</p>
+        </section>
+        <section><h2>Как я работаю</h2>
+          <p class="summary">Работаю как продуктовая команда из одного человека: оркеструю кодинг-агентов, чтобы проектировать, строить и доставлять — делегирую исполнение и рулю качеством и скоростью, выдавая выхлоп целой команды.</p>
+        </section>
+        <section><h2>Избранные проекты</h2>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">B2B-платформа для коллабораций брендов и креаторов</span><span class="entry-date">2026 – наст.</span></div>
+            <div class="entry-meta">Контракт · senior full-stack / AI-инженер · <span class="nda">под NDA</span></div>
+            <ul>
+              <li>Проектирую <b>workflow-движок на Temporal</b> и <b>control plane для AI-провайдеров</b> (cost ledger, rate-limiting, circuit breakers, webhook-replay) для мультидоменной платформы.</li>
+              <li>Выстроил <b>domain-driven монорепо</b> (переносимое platform-ядро + бизнес-домены) с P0–P5 smoke-гейтами и полным observability (Grafana / Loki / Alloy).</li>
+              <li>Строю <b>skills-based LLM-генерацию</b> (18+ доменных skill'ов — обогащение бренда, генерация брифов/сценариев, антифрод) с guardrails и quality-eval.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Agentic-система поддержки</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Контракт · AI-инженер · <span class="nda">B2B-компания (GPU-инфраструктура), под NDA</span></div>
+            <ul>
+              <li>Построил end-to-end <b>систему поддержки на LLM-агентах</b> (Vercel AI SDK, OODA tool-calling loop) для Telegram / Email / Web — классификация intent, извлечение полей, авто-тикетинг (~120K LOC).</li>
+              <li>Реализовал <b>мультимодальный ввод</b> (vision + Whisper STT) и контекстную память поверх PostgreSQL/pgvector + Redis.</li>
+              <li>Внедрил <b>самоулучшающийся eval-loop</b> (45+ реальных кейсов → LLM-правка промптов → regression-гейтинг в CI) и production-инфру (Docker, Langfuse, retry-очереди, graceful shutdown).</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Viracle — AI-аналитика виральности видео</span><span class="entry-date">2025 – 2026</span></div>
+            <div class="entry-meta">Founder / Solo Engineer</div>
+            <ul>
+              <li>Спроектировал <b>event-driven backend</b> (Fastify, Temporal.io, 4 микросервиса), который скрейпит, анализирует и оценивает короткие видео (TikTok / Reels / Shorts).</li>
+              <li>Построил <b>мультимодальный анализ видео</b> на Gemini structured outputs (хук, пейсинг, CTA, ниша, sentiment) и <b>7-уровневый Python ML-пайплайн</b> (корреляции, кластеризация, детекция аномалий → контент-рекомендации).</li>
+              <li>Поднял production-инфру: PostgreSQL/Drizzle (20+ таблиц), Redis Streams, полный observability (Prometheus / Grafana / Jaeger), биллинг и auth.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Noracle — AI-SaaS интерпретации снов</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Founder / Solo Engineer · <a href="https://t.me/NocturnalOracleBot">Живое демо ↗</a></div>
+            <ul>
+              <li>Запустил <b>живой монетизированный</b> Telegram-AI-продукт (оплата Telegram Stars; <b>D30-retention 38%</b> среди платящих).</li>
+              <li>Спроектировал <b>5-этапный LLM-пайплайн</b> (fallback Gemini↔OpenAI, per-tier cost-guards, structured outputs на Zod).</li>
+              <li>Выполнил <b>zero-downtime идемпотентную миграцию</b> 3 485 пользователей / 6 340 записей с cold-backup.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Независимое AI-исследование — интерпретируемость и эффективные архитектуры</span><span class="entry-date">2025 – 2026</span></div>
+            <div class="entry-meta">Самостоятельно</div>
+            <ul>
+              <li>200+ экспериментов по извлечению <b>точной, верифицируемой логики</b> из обученных сетей (lossless NN → формула → Verilog), в отличие от приближённых методов (SHAP/LIME).</li>
+              <li>Результаты: parity-128 на <b>40 параметрах</b>; адаптер-копроцессор для GPT-2, поднимающий 8-битную арифметику с <b>0%→97% при 0.08% параметров</b>; ускорение инференса <b>FHE 131×</b>.</li>
+              <li>Строгая методология (multi-seed, поправка Бонферрони, 3 раунда верификации) с задокументированным логом опровергнутых гипотез.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">GRAB-A-WORD-II — real-time мультиплеер, словесная игра</span><span class="entry-date">2024</span></div>
+            <div class="entry-meta">Founder / Solo Engineer</div>
+            <ul>
+              <li>Построил соло <b>full-stack real-time мультиплеер</b> (Nuxt/Vue, Socket.io, Redis/BullMQ) с локализацией RU/EN и Telegram-интеграцией.</li>
+              <li>Создал модульную дизайн-систему (Storybook, 26 компонентов) и словарный пайплайн (Apify + OpenAI) в монорепо из 10 модулей.</li>
+            </ul>
+          </div>
+        </section>
+        <section><h2>Опыт</h2>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Независимый full-stack инженер и продуктовый консультант</span><span class="entry-date">2015 – наст.</span></div>
+            <div class="entry-meta">Upwork · Top Rated</div>
+            <ul>
+              <li><b>$300K+ заработано за 61 проект / 4 446 часов, ~100% success</b>; клиенты преимущественно US, Canada, Europe.</li>
+              <li>30+ MVP и proof-of-concept; глубокое участие в продуктовых решениях и техническом консультировании.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Co-founder · продукт и full-stack инженер</span><span class="entry-date">2011 – 2014</span></div>
+            <div class="entry-meta">Empatika — App in the Air</div>
+            <ul><li>Со-основал travel-ассистент: <b>7M пользователей, Apple App of the Year</b>, Editors' Choice, предустановка во всех Apple Store мира.</li></ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Creative Technologist · Visual Programmer</span><span class="entry-date">2008 – 2015</span></div>
+            <div class="entry-meta">INTY · TNT Broadcast Network</div>
+            <ul><li>Интерактивные инсталляции и real-time визуальные системы (TouchDesigner, Ventuz, GLSL, Arduino).</li></ul>
+          </div>
+        </section>
+      </main>
+
+      <aside class="col-side">
+        <section><h2>Контакты</h2>
+          <div class="side-contact">
+            <span class="loc">Аргентина · UTC-3</span>
+            <span>Remote · оверлап с US-часами</span>
+            <a href="mailto:v.lapchevskiy@gmail.com">v.lapchevskiy@gmail.com</a>
+            <a href="https://t.me/gen4sp">Telegram @gen4sp</a>
+            <a href="https://www.upwork.com/fl/valentinel">Upwork — Top Rated</a>
+            <a href="https://www.crunchbase.com/organization/app-in-the-air">App in the Air ↗</a>
+          </div>
+        </section>
+        <section><h2>Главное</h2>
+          <ul class="facts">
+            <li><b>7M</b> юзеров · Apple App of the Year</li>
+            <li><b>$300K+</b> · 61 проект · Top Rated</li>
+            <li><b>6</b> AI-систем (2024–26)</li>
+            <li>Agent-native подход</li>
+          </ul>
+        </section>
+        <section><h2>Навыки</h2>
+          <div class="sk"><div class="sk-k">AI / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
+          <div class="sk"><div class="sk-k">Backend</div><div class="sk-v">Node.js / TypeScript, Fastify / Express, Temporal.io, Redis / BullMQ, PostgreSQL (Drizzle, pgvector), MongoDB.</div></div>
+          <div class="sk"><div class="sk-k">Frontend</div><div class="sk-v">React, Vue / Nuxt, TypeScript, Tailwind, design systems, FSD.</div></div>
+          <div class="sk"><div class="sk-k">Data / ML</div><div class="sk-v">Python, PyTorch, scikit-learn, data pipelines, scraping.</div></div>
+          <div class="sk"><div class="sk-k">Infra</div><div class="sk-v">Docker, CI/CD, observability (Prometheus / Grafana / Jaeger / OTel), GCP / AWS.</div></div>
+          <div class="sk"><div class="sk-k">Ещё</div><div class="sk-v">Solidity / Web3; creative tech (TouchDesigner, GLSL/HLSL).</div></div>
+        </section>
+        <section><h2>Образование и языки</h2>
+          <p class="plain"><b>Бакалавр, прикладная информатика</b><br>Российский университет кооперации (2000–2005).</p>
+          <p class="plain">English (professional) · Russian (native) · Spanish (B1, в процессе).</p>
+        </section>
+      </aside>
+    </div>
+    <footer>Valentin Lapchevskiy · AI-Native Product Engineer · Открыт к контрактным и fractional-проектам — remote.</footer>
+  </div>
+
+  <!-- ==================== ESPAÑOL ==================== -->
+  <div class="lang lang-es">
+    <div class="idband">
+      <div class="photo-ph">VL</div>
+      <div class="idtext">
+        <div class="name">Valentin Lapchevskiy</div>
+        <div class="title">AI-Native Product Engineer — full-stack + sistemas LLM / agentes, de extremo a extremo</div>
+      </div>
+      <div class="langswitch">
+        <button data-l="en" onclick="setLang('en')">EN</button>
+        <button data-l="ru" onclick="setLang('ru')">RU</button>
+        <button data-l="es" class="on" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+    <p class="tagline">Entrego productos completos de extremo a extremo — backend, frontend y la capa de agentes LLM — orquestando agentes de programación con el rendimiento de un equipo.</p>
+
+    <div class="cols">
+      <main class="col-main">
+        <section><h2>Resumen</h2>
+          <p class="summary">Ingeniero de producto AI-native que entrega sistemas completos de extremo a extremo — backend, frontend y la capa de agentes LLM — orquestando agentes de programación con el rendimiento de un equipo. 15 años construyendo productos: cofundador de <b>App in the Air</b> (7M usuarios, <b>Apple App of the Year</b>) y freelancer <b>Top-Rated</b> con <b>$300K+ en 61 proyectos</b> (~100% de éxito). Enfoque reciente: sistemas con agentes en producción, pipelines LLM multimodales e interpretabilidad de IA.</p>
+        </section>
+        <section><h2>Cómo trabajo</h2>
+          <p class="summary">Funciono como un equipo de producto de una sola persona: orquesto agentes de programación para diseñar, construir y entregar — delegando la ejecución y dirigiendo la calidad y la velocidad, con el rendimiento de un equipo completo.</p>
+        </section>
+        <section><h2>Proyectos destacados</h2>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Plataforma B2B de colaboración marca-creador</span><span class="entry-date">2026 – act.</span></div>
+            <div class="entry-meta">Contrato · Ingeniero senior full-stack / IA · <span class="nda">bajo NDA</span></div>
+            <ul>
+              <li>Diseñando un <b>motor de workflows basado en Temporal</b> y un <b>control plane de proveedores de IA</b> (cost ledger, rate limiting, circuit breakers, reintento de webhooks) que impulsa una plataforma multidominio.</li>
+              <li>Establecí un <b>monorepo orientado a dominios</b> (núcleo de plataforma portable + dominios de negocio) con smoke gates P0–P5 y observabilidad completa (Grafana / Loki / Alloy).</li>
+              <li>Construyendo un <b>sistema de generación con LLM basado en skills</b> (18+ skills de dominio — enriquecimiento de marca, generación de briefs/guiones, antifraude) con guardrails y evaluaciones de calidad.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Sistema de soporte con agentes LLM</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Contrato · Ingeniero de IA · <span class="nda">empresa de infraestructura GPU B2B, bajo NDA</span></div>
+            <ul>
+              <li>Construí un <b>sistema de soporte de extremo a extremo con agentes LLM</b> (Vercel AI SDK, bucle OODA con tool-calling) en Telegram / Email / Web — clasificación de intención, extracción de campos y ticketing automatizado (~120K LOC).</li>
+              <li>Desarrollé <b>entrada multimodal</b> (visión + Whisper STT) y memoria contextual sobre PostgreSQL/pgvector + Redis.</li>
+              <li>Implementé un <b>bucle de evaluación auto-mejorable</b> (45+ casos reales → refinamiento de prompts con LLM → gating de regresión en CI) e infraestructura de producción (Docker, Langfuse, colas de reintento, apagado controlado).</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Viracle — Analítica de viralidad de vídeo con IA</span><span class="entry-date">2025 – 2026</span></div>
+            <div class="entry-meta">Fundador / Ingeniero en solitario</div>
+            <ul>
+              <li>Diseñé un <b>backend orientado a eventos</b> (Fastify, Temporal.io, 4 microservicios) que rastrea, analiza y puntúa vídeo corto (TikTok / Reels / Shorts).</li>
+              <li>Construí <b>análisis multimodal de vídeo</b> sobre structured outputs de Gemini (hook, ritmo, CTA, nicho, sentimiento) y un <b>pipeline de ML en Python de 7 etapas</b> (correlación, clustering, detección de anomalías → directrices de contenido).</li>
+              <li>Levanté infraestructura de producción: PostgreSQL/Drizzle (20+ tablas), Redis Streams, observabilidad completa (Prometheus / Grafana / Jaeger), facturación y autenticación.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Noracle — SaaS de interpretación de sueños con IA</span><span class="entry-date">2026</span></div>
+            <div class="entry-meta">Fundador / Ingeniero en solitario · <a href="https://t.me/NocturnalOracleBot">Demo en vivo ↗</a></div>
+            <ul>
+              <li>Lancé un <b>producto de IA en vivo y monetizado</b> en Telegram (facturación con Telegram Stars; <b>38% de retención D30</b> entre usuarios de pago).</li>
+              <li>Diseñé un <b>pipeline LLM de 5 etapas</b> (fallback Gemini↔OpenAI, guardas de coste por tier, structured outputs validados con Zod).</li>
+              <li>Ejecuté una <b>migración idempotente sin downtime</b> de 3.485 usuarios / 6.340 registros con respaldo en frío.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Investigación independiente en IA — interpretabilidad y arquitecturas eficientes</span><span class="entry-date">2025 – 2026</span></div>
+            <div class="entry-meta">Autodirigido</div>
+            <ul>
+              <li>200+ experimentos sobre extracción de <b>lógica exacta y verificable</b> de redes entrenadas (NN → fórmula → Verilog sin pérdida), frente a métodos aproximados (SHAP/LIME).</li>
+              <li>Resultados destacados: parity-128 con <b>40 parámetros</b>; un adaptador-coprocesador para GPT-2 que eleva la aritmética de 8 bits de <b>0%→97% con el 0,08% de los parámetros</b>; aceleración de inferencia <b>131× bajo FHE</b>.</li>
+              <li>Metodología rigurosa (multi-seed, corrección de Bonferroni, 3 rondas de verificación) con un registro documentado de hipótesis refutadas.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">GRAB-A-WORD-II — Juego de palabras multijugador en tiempo real</span><span class="entry-date">2024</span></div>
+            <div class="entry-meta">Fundador / Ingeniero en solitario</div>
+            <ul>
+              <li>Construí en solitario un <b>juego multijugador full-stack en tiempo real</b> (Nuxt/Vue, Socket.io, Redis/BullMQ) con localización RU/EN e integración con Telegram.</li>
+              <li>Creé un sistema de diseño modular (Storybook, 26 componentes) y un pipeline de diccionarios (Apify + OpenAI) en un monorepo de 10 módulos.</li>
+            </ul>
+          </div>
+        </section>
+        <section><h2>Experiencia</h2>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Ingeniero full-stack independiente y consultor de producto</span><span class="entry-date">2015 – act.</span></div>
+            <div class="entry-meta">Upwork · Top Rated</div>
+            <ul>
+              <li><b>$300K+ generados en 61 proyectos / 4.446 horas, ~100% de éxito</b>; clientes principalmente en EE. UU., Canadá y Europa.</li>
+              <li>30+ MVPs y pruebas de concepto; participación profunda en decisiones de producto y asesoría técnica.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Cofundador · Ingeniero de producto y full-stack</span><span class="entry-date">2011 – 2014</span></div>
+            <div class="entry-meta">Empatika — App in the Air</div>
+            <ul><li>Cofundé una app de asistente de viajes: <b>7M usuarios, Apple App of the Year</b>, Editors' Choice, preinstalada en las Apple Store de todo el mundo.</li></ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head"><span class="entry-title">Creative Technologist · Visual Programmer</span><span class="entry-date">2008 – 2015</span></div>
+            <div class="entry-meta">INTY · TNT Broadcast Network</div>
+            <ul><li>Instalaciones interactivas y sistemas visuales en tiempo real (TouchDesigner, Ventuz, GLSL, Arduino).</li></ul>
+          </div>
+        </section>
+      </main>
+
+      <aside class="col-side">
+        <section><h2>Contacto</h2>
+          <div class="side-contact">
+            <span class="loc">Argentina · UTC-3</span>
+            <span>Remoto · horario de EE. UU.</span>
+            <a href="mailto:v.lapchevskiy@gmail.com">v.lapchevskiy@gmail.com</a>
+            <a href="https://t.me/gen4sp">Telegram @gen4sp</a>
+            <a href="https://www.upwork.com/fl/valentinel">Upwork — Top Rated</a>
+            <a href="https://www.crunchbase.com/organization/app-in-the-air">App in the Air ↗</a>
+          </div>
+        </section>
+        <section><h2>Destacados</h2>
+          <ul class="facts">
+            <li><b>7M</b> usuarios · Apple App of the Year</li>
+            <li><b>$300K+</b> · 61 proyectos · Top Rated</li>
+            <li><b>6</b> sistemas de IA (2024–26)</li>
+            <li>Entrega agent-native</li>
+          </ul>
+        </section>
+        <section><h2>Habilidades</h2>
+          <div class="sk"><div class="sk-k">IA / LLM</div><div class="sk-v">Agentic systems (tool-calling, OODA), Vercel AI SDK, OpenAI · Anthropic · Gemini, RAG / pgvector, multimodal (vision, STT), structured outputs, LLM eval &amp; observability (Langfuse), agent-driven dev; interpretability, tensor networks.</div></div>
+          <div class="sk"><div class="sk-k">Backend</div><div class="sk-v">Node.js / TypeScript, Fastify / Express, Temporal.io, Redis / BullMQ, PostgreSQL (Drizzle, pgvector), MongoDB.</div></div>
+          <div class="sk"><div class="sk-k">Frontend</div><div class="sk-v">React, Vue / Nuxt, TypeScript, Tailwind, design systems, FSD.</div></div>
+          <div class="sk"><div class="sk-k">Datos / ML</div><div class="sk-v">Python, PyTorch, scikit-learn, data pipelines, scraping.</div></div>
+          <div class="sk"><div class="sk-k">Infra</div><div class="sk-v">Docker, CI/CD, observability (Prometheus / Grafana / Jaeger / OTel), GCP / AWS.</div></div>
+          <div class="sk"><div class="sk-k">Además</div><div class="sk-v">Solidity / Web3; creative tech (TouchDesigner, GLSL/HLSL).</div></div>
+        </section>
+        <section><h2>Educación e idiomas</h2>
+          <p class="plain"><b>Licenciatura en Informática Aplicada</b><br>Russian University of Cooperation (2000–2005).</p>
+          <p class="plain">Inglés (profesional) · Ruso (nativo) · Español (B1, en progreso).</p>
+        </section>
+      </aside>
+    </div>
+    <footer>Valentin Lapchevskiy · AI-Native Product Engineer · Disponible para contratos y proyectos fractional — remoto.</footer>
+  </div>
+
+</div>
+
+<script>
+  function setLang(l){
+    var ls=document.querySelectorAll('.lang');
+    for(var i=0;i<ls.length;i++){ls[i].classList.toggle('active', ls[i].classList.contains('lang-'+l));}
+    var bs=document.querySelectorAll('.langswitch button');
+    for(var j=0;j<bs.length;j++){bs[j].classList.toggle('on', bs[j].getAttribute('data-l')===l);}
+    document.documentElement.lang=l;
+    try{localStorage.setItem('cvlang',l);}catch(e){}
+  }
+  (function(){try{var s=localStorage.getItem('cvlang');if(s&&s!=='en'){setLang(s);}}catch(e){}})();
+</script>
+</body>
+</html>
