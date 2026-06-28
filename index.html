@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Valentin Lapchevskiy — AI-Native Product Engineer</title>
 <meta name="description" content="AI-native product engineer — full-stack + LLM/agent systems. Co-founder of App in the Air (7M users, Apple App of the Year). Top-Rated, $300K+ on Upwork.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVJHBPX5WV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WVJHBPX5WV');
+</script>
 <style>
   /* THEME — change accent in ONE place. Presets: Teal #0f766e · Indigo #5b4bdb · Blue #1d4ed8 · Emerald #047857 · Amber #b45309 · Rose #be123c */
   :root{
@@ -584,6 +592,49 @@
     try{localStorage.setItem('cvlang',l);}catch(e){}
   }
   (function(){try{var s=localStorage.getItem('cvlang');if(s&&s!=='en'){setLang(s);}}catch(e){}})();
+
+  // ---- Analytics: track clicks on every clickable element (links + language switch) ----
+  function gaEvent(name, params){
+    try{ if(typeof gtag==='function'){ gtag('event', name, params); } }catch(e){}
+  }
+  function currentLang(){
+    var a=document.querySelector('.lang.active');
+    if(a){ var m=a.className.match(/lang-([a-z]+)/); if(m){ return m[1]; } }
+    return document.documentElement.lang || 'en';
+  }
+  document.addEventListener('click', function(e){
+    var lang = currentLang();
+
+    // Language switcher buttons
+    var btn = e.target.closest('.langswitch button');
+    if(btn){
+      gaEvent('language_switch', {
+        selected_language: btn.getAttribute('data-l'),
+        from_language: lang
+      });
+      return;
+    }
+
+    // Any link
+    var a = e.target.closest('a[href]');
+    if(a){
+      var href = a.getAttribute('href') || '';
+      var text = (a.textContent || '').trim().replace(/\s+/g,' ');
+      var type = 'other';
+      if(/^mailto:/i.test(href)) type='email';
+      else if(/NocturnalOracleBot/i.test(href)) type='demo';
+      else if(/t\.me/i.test(href)) type='telegram';
+      else if(/upwork\.com/i.test(href)) type='upwork';
+      else if(/crunchbase\.com/i.test(href)) type='crunchbase';
+      gaEvent('link_click', {
+        link_url: href,
+        link_text: text,
+        link_type: type,
+        ui_language: lang,
+        outbound: /^https?:/i.test(href)
+      });
+    }
+  }, true);
 </script>
 </body>
 </html>
