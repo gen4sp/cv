@@ -3,8 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Valentin Lapchevskiy — AI-Native Product Engineer</title>
+<title>Valentin Lapchevskiy — AI-Native Product Engineer | CV</title>
 <meta name="description" content="AI-native product engineer — full-stack + LLM/agent systems. Co-founder of App in the Air (7M users, Apple App of the Year). Top-Rated, $300K+ on Upwork.">
+<meta name="author" content="Valentin Lapchevskiy">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://gen4sp.github.io/cv/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Social preview -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Valentin Lapchevskiy — CV">
+<meta property="og:title" content="Valentin Lapchevskiy — AI-Native Product Engineer">
+<meta property="og:description" content="Full-stack + LLM/agent systems, end-to-end. Co-founder of App in the Air (7M users, Apple App of the Year). Top-Rated on Upwork — $300K+ across 61 projects.">
+<meta property="og:url" content="https://gen4sp.github.io/cv/">
+<meta property="og:image" content="https://gen4sp.github.io/cv/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Valentin Lapchevskiy — AI-Native Product Engineer">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="profile:first_name" content="Valentin">
+<meta property="profile:last_name" content="Lapchevskiy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Valentin Lapchevskiy — AI-Native Product Engineer">
+<meta name="twitter:description" content="Full-stack + LLM/agent systems, end-to-end. Co-founder of App in the Air (7M users, Apple App of the Year). Top-Rated on Upwork — $300K+ across 61 projects.">
+<meta name="twitter:image" content="https://gen4sp.github.io/cv/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Valentin Lapchevskiy",
+  "alternateName": "Валентин Лапчевский",
+  "url": "https://gen4sp.github.io/cv/",
+  "image": "https://gen4sp.github.io/cv/photo.jpeg",
+  "email": "mailto:v.lapchevskiy@gmail.com",
+  "jobTitle": "AI-Native Product Engineer",
+  "description": "AI-native product engineer who ships full systems end-to-end — backend, frontend, and the LLM-agent layer. Co-founder of App in the Air (7M users, Apple App of the Year); Top-Rated freelancer with $300K+ across 61 projects.",
+  "address": { "@type": "PostalAddress", "addressCountry": "AR" },
+  "knowsAbout": ["LLM agents", "Agentic systems", "AI interpretability", "Full-stack engineering", "TypeScript", "Node.js", "Temporal.io", "PostgreSQL", "Python", "Product engineering"],
+  "knowsLanguage": [
+    { "@type": "Language", "name": "English" },
+    { "@type": "Language", "name": "Russian" },
+    { "@type": "Language", "name": "Spanish" }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Higher School of Economics" },
+    { "@type": "CollegeOrUniversity", "name": "Russian University of Cooperation" }
+  ],
+  "sameAs": [
+    "https://github.com/gen4sp",
+    "https://t.me/gen4sp",
+    "https://www.upwork.com/fl/valentinel",
+    "https://www.crunchbase.com/organization/app-in-the-air"
+  ]
+}
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVJHBPX5WV"></script>
 <script>
@@ -38,11 +95,26 @@
   .idtext{flex:1;min-width:200px}
   .name{font-size:36px;font-weight:760;letter-spacing:-.02em;line-height:1.05}
   .title{margin-top:5px;font-size:15.5px;font-weight:600;color:var(--accent)}
-  .langswitch{display:flex;gap:5px;align-self:flex-start}
+  .controls{display:flex;flex-direction:column;align-items:flex-end;gap:9px;align-self:flex-start}
+  .langswitch{display:flex;gap:5px}
   .langswitch button{font:inherit;font-size:12px;font-weight:680;letter-spacing:.04em;color:var(--muted);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:5px 12px;cursor:pointer;transition:all .15s}
   .langswitch button:hover{border-color:var(--accent);color:var(--accent)}
   .langswitch button.on{background:var(--accent);border-color:var(--accent);color:#fff}
   .tagline{margin-top:14px;font-size:16.5px;color:var(--muted)}
+
+  /* Download dropdown */
+  .dl{position:relative}
+  .dl-btn{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:12.5px;font-weight:680;letter-spacing:.02em;color:#fff;background:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:7px 14px;cursor:pointer;transition:filter .15s}
+  .dl-btn:hover{filter:brightness(1.12)}
+  .dl-btn svg{width:13px;height:13px;flex:0 0 auto}
+  .dl-btn .caret{font-size:9px;opacity:.85;transition:transform .15s}
+  .dl-btn[aria-expanded="true"] .caret{transform:rotate(180deg)}
+  .dl-menu{position:absolute;top:calc(100% + 6px);right:0;z-index:20;min-width:196px;background:#fff;border:1px solid var(--rule);border-radius:10px;box-shadow:0 8px 28px rgba(20,20,30,.12),0 2px 6px rgba(20,20,30,.06);padding:5px;display:flex;flex-direction:column}
+  .dl-menu[hidden]{display:none}
+  .dl-menu a{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:7px;border:0;font-size:13.5px;font-weight:620;color:var(--ink);white-space:nowrap;transition:background .12s}
+  .dl-menu a:hover,.dl-menu a:focus-visible{background:var(--chip);color:var(--accent);outline:none}
+  .dl-note{font-size:11px;font-weight:520;color:var(--faint);letter-spacing:.02em}
+  .dl-menu a:hover .dl-note{color:var(--accent);opacity:.75}
 
   /* Two columns */
   .cols{display:grid;grid-template-columns:236px 1fr;gap:40px;align-items:start;margin-top:30px}
@@ -80,24 +152,26 @@
 
   footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--rule);font-size:12px;color:var(--faint)}
 
-  @media (max-width:760px){
+  /* `screen and` matters: an A4 page box is ~703px wide, so an unscoped max-width:760px
+     query would hijack the print layout and collapse the two columns. */
+  @media screen and (max-width:760px){
     .wrap{padding:36px 22px 48px}
     .name{font-size:28px}
     .cols{grid-template-columns:1fr;gap:8px}
     .idband{grid-template-columns:1fr;gap:18px}
     .col-side,.col-main{grid-column:auto;grid-row:auto}
     .col-main{margin-bottom:24px}
-    .langswitch{margin-left:auto}
+    .controls{flex-direction:row;align-items:center;justify-content:space-between;width:100%;gap:12px}
     .entry-head{flex-direction:column;gap:1px}
     .entry-date{order:2}
   }
 
   @media print{
-    @page{margin:12mm}
+    @page{size:A4;margin:12mm}
     body{background:#fff;font-size:10pt;line-height:1.4}
     .wrap{max-width:100%;padding:0}
     a{color:var(--ink);border:0}
-    .langswitch,footer{display:none}
+    .controls,footer{display:none}
     .chip,.photo-ph{background:transparent}
     .photo{width:112px;height:112px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     h2,.title,.sk-k{color:#000}
@@ -113,19 +187,31 @@
 <div class="wrap">
 
   <!-- ==================== ENGLISH ==================== -->
-  <div class="lang lang-en active">
+  <div class="lang lang-en active" lang="en">
     <div class="idband">
-      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy" width="190" height="190">
+      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy — AI-Native Product Engineer" width="190" height="190" fetchpriority="high">
       <div class="idbody">
         <div class="idrow">
           <div class="idtext">
-            <div class="name">Valentin Lapchevskiy</div>
+            <h1 class="name">Valentin Lapchevskiy</h1>
             <div class="title">AI-Native Product Engineer — full-stack + LLM / agent systems, end-to-end</div>
           </div>
-          <div class="langswitch">
-            <button data-l="en" class="on" onclick="setLang('en')">EN</button>
-            <button data-l="ru" onclick="setLang('ru')">RU</button>
-            <button data-l="es" onclick="setLang('es')">ES</button>
+          <div class="controls">
+            <div class="langswitch">
+              <button data-l="en" class="on" onclick="setLang('en')">EN</button>
+              <button data-l="ru" onclick="setLang('ru')">RU</button>
+              <button data-l="es" onclick="setLang('es')">ES</button>
+            </div>
+            <div class="dl">
+              <button type="button" class="dl-btn" aria-haspopup="menu" aria-expanded="false" data-dl-btn>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.9v8.3M4.7 6.9 8 10.2l3.3-3.3M2.2 13.3h11.6"/></svg>
+                Download<span class="caret">▾</span>
+              </button>
+              <div class="dl-menu" role="menu" hidden>
+                <a role="menuitem" href="files/valentin-lapchevskiy-cv-en.pdf" download><span>PDF</span><span class="dl-note">A4 · print-ready</span></a>
+                <a role="menuitem" href="files/valentin-lapchevskiy-cv-en.md" download><span>Markdown</span><span class="dl-note">.md · plain text</span></a>
+              </div>
+            </div>
           </div>
         </div>
         <p class="tagline">I ship full products end-to-end — backend, frontend, and the LLM-agent layer — by orchestrating AI coding agents at team-level throughput.</p>
@@ -269,19 +355,31 @@
   </div>
 
   <!-- ==================== РУССКИЙ ==================== -->
-  <div class="lang lang-ru">
+  <div class="lang lang-ru" lang="ru" hidden>
     <div class="idband">
-      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy" width="190" height="190">
+      <img class="photo" src="photo.jpeg" alt="Валентин Лапчевский — AI-Native Product Engineer" width="190" height="190">
       <div class="idbody">
         <div class="idrow">
           <div class="idtext">
-            <div class="name">Valentin Lapchevskiy</div>
+            <h1 class="name">Valentin Lapchevskiy</h1>
             <div class="title">AI-Native Product Engineer — full-stack + LLM / агентные системы, end-to-end</div>
           </div>
-          <div class="langswitch">
-            <button data-l="en" onclick="setLang('en')">EN</button>
-            <button data-l="ru" class="on" onclick="setLang('ru')">RU</button>
-            <button data-l="es" onclick="setLang('es')">ES</button>
+          <div class="controls">
+            <div class="langswitch">
+              <button data-l="en" onclick="setLang('en')">EN</button>
+              <button data-l="ru" class="on" onclick="setLang('ru')">RU</button>
+              <button data-l="es" onclick="setLang('es')">ES</button>
+            </div>
+            <div class="dl">
+              <button type="button" class="dl-btn" aria-haspopup="menu" aria-expanded="false" data-dl-btn>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.9v8.3M4.7 6.9 8 10.2l3.3-3.3M2.2 13.3h11.6"/></svg>
+                Скачать<span class="caret">▾</span>
+              </button>
+              <div class="dl-menu" role="menu" hidden>
+                <a role="menuitem" href="files/valentin-lapchevskiy-cv-ru.pdf" download><span>PDF</span><span class="dl-note">A4 · для печати</span></a>
+                <a role="menuitem" href="files/valentin-lapchevskiy-cv-ru.md" download><span>Markdown</span><span class="dl-note">.md · текст</span></a>
+              </div>
+            </div>
           </div>
         </div>
         <p class="tagline">Собираю продукты целиком — backend, frontend и LLM-слой — оркестрируя кодинг-агентов с производительностью команды.</p>
@@ -425,19 +523,31 @@
   </div>
 
   <!-- ==================== ESPAÑOL ==================== -->
-  <div class="lang lang-es">
+  <div class="lang lang-es" lang="es" hidden>
     <div class="idband">
-      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy" width="190" height="190">
+      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy — Ingeniero de producto AI-native" width="190" height="190">
       <div class="idbody">
         <div class="idrow">
           <div class="idtext">
-            <div class="name">Valentin Lapchevskiy</div>
+            <h1 class="name">Valentin Lapchevskiy</h1>
             <div class="title">AI-Native Product Engineer — full-stack + sistemas LLM / agentes, de extremo a extremo</div>
           </div>
-          <div class="langswitch">
-            <button data-l="en" onclick="setLang('en')">EN</button>
-            <button data-l="ru" onclick="setLang('ru')">RU</button>
-            <button data-l="es" class="on" onclick="setLang('es')">ES</button>
+          <div class="controls">
+            <div class="langswitch">
+              <button data-l="en" onclick="setLang('en')">EN</button>
+              <button data-l="ru" onclick="setLang('ru')">RU</button>
+              <button data-l="es" class="on" onclick="setLang('es')">ES</button>
+            </div>
+            <div class="dl">
+              <button type="button" class="dl-btn" aria-haspopup="menu" aria-expanded="false" data-dl-btn>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.9v8.3M4.7 6.9 8 10.2l3.3-3.3M2.2 13.3h11.6"/></svg>
+                Descargar<span class="caret">▾</span>
+              </button>
+              <div class="dl-menu" role="menu" hidden>
+                <a role="menuitem" href="files/valentin-lapchevskiy-cv-es.pdf" download><span>PDF</span><span class="dl-note">A4 · para imprimir</span></a>
+                <a role="menuitem" href="files/valentin-lapchevskiy-cv-es.md" download><span>Markdown</span><span class="dl-note">.md · texto</span></a>
+              </div>
+            </div>
           </div>
         </div>
         <p class="tagline">Entrego productos completos de extremo a extremo — backend, frontend y la capa de agentes LLM — orquestando agentes de programación con el rendimiento de un equipo.</p>
@@ -583,15 +693,61 @@
 </div>
 
 <script>
+  var LANGS={en:1,ru:1,es:1};
+
   function setLang(l){
+    if(!LANGS[l]){l='en';}
     var ls=document.querySelectorAll('.lang');
-    for(var i=0;i<ls.length;i++){ls[i].classList.toggle('active', ls[i].classList.contains('lang-'+l));}
+    for(var i=0;i<ls.length;i++){
+      var on=ls[i].classList.contains('lang-'+l);
+      ls[i].classList.toggle('active', on);
+      ls[i].hidden=!on;
+    }
     var bs=document.querySelectorAll('.langswitch button');
     for(var j=0;j<bs.length;j++){bs[j].classList.toggle('on', bs[j].getAttribute('data-l')===l);}
     document.documentElement.lang=l;
+    closeMenus();
     try{localStorage.setItem('cvlang',l);}catch(e){}
+    try{
+      var u=new URL(location.href);
+      if(l==='en'){u.searchParams.delete('lang');}else{u.searchParams.set('lang',l);}
+      history.replaceState(null,'',u.pathname+u.search+u.hash);
+    }catch(e){}
   }
-  (function(){try{var s=localStorage.getItem('cvlang');if(s&&s!=='en'){setLang(s);}}catch(e){}})();
+
+  // ?lang=ru deep-links win over the remembered choice; default is EN.
+  (function(){
+    var q=null,s=null;
+    try{q=new URLSearchParams(location.search).get('lang');}catch(e){}
+    try{s=localStorage.getItem('cvlang');}catch(e){}
+    var l=(q&&LANGS[q])?q:((s&&LANGS[s])?s:'en');
+    if(l!=='en'||q){setLang(l);}
+  })();
+
+  // ---- Download dropdown (PDF / Markdown for the active language) ----
+  function closeMenus(except){
+    var ds=document.querySelectorAll('.dl');
+    for(var i=0;i<ds.length;i++){
+      if(ds[i]===except){continue;}
+      ds[i].querySelector('.dl-menu').hidden=true;
+      ds[i].querySelector('.dl-btn').setAttribute('aria-expanded','false');
+    }
+  }
+  document.addEventListener('click', function(e){
+    var btn=e.target.closest('[data-dl-btn]');
+    if(btn){
+      var box=btn.parentNode, menu=box.querySelector('.dl-menu'), open=menu.hidden;
+      closeMenus(box);
+      menu.hidden=!open;
+      btn.setAttribute('aria-expanded', open?'true':'false');
+      if(open){menu.querySelector('a').focus();}
+      return;
+    }
+    closeMenus();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape'){closeMenus();}
+  });
 
   // ---- Analytics: track clicks on every clickable element (links + language switch) ----
   function gaEvent(name, params){
@@ -611,6 +767,18 @@
       gaEvent('language_switch', {
         selected_language: btn.getAttribute('data-l'),
         from_language: lang
+      });
+      return;
+    }
+
+    // CV file downloads (PDF / Markdown)
+    var dl = e.target.closest('.dl-menu a[href]');
+    if(dl){
+      var dhref = dl.getAttribute('href') || '';
+      gaEvent('cv_download', {
+        file_format: dhref.split('.').pop().toLowerCase(),
+        file_name: dhref.split('/').pop(),
+        ui_language: lang
       });
       return;
     }
