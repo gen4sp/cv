@@ -273,7 +273,7 @@
             <div class="entry-meta">Self-directed</div>
             <ul>
               <li>200+ experiments on extracting <b>exact, verifiable logic</b> from trained networks (lossless NN → formula → Verilog), vs. approximate methods (SHAP/LIME).</li>
-              <li>Notable results: parity-128 in <b>40 parameters</b>; a GPT-2 reasoning-coprocessor adapter lifting 8-bit arithmetic from <b>0%→97% at 0.08% of parameters</b>; <b>131× FHE</b> inference speedup.</li>
+              <li>Notable results: a <b>40-parameter</b> recurrent Boolean cell solves dense parity-128 (100% held-out, 5/5 seeds) where a GRU baseline stays at chance; exact <b>ANF → Verilog</b> extraction with 100% model/formula agreement; a <b>0.08%-parameter</b> Boolean coprocessor gives a frozen GPT-2 multi-digit addition it cannot do zero-shot.</li>
               <li>Rigorous methodology (multi-seed, Bonferroni correction, 3 verification rounds) with a documented falsified-hypotheses log.</li>
             </ul>
           </div>
@@ -441,7 +441,7 @@
             <div class="entry-meta">Самостоятельно</div>
             <ul>
               <li>200+ экспериментов по извлечению <b>точной, верифицируемой логики</b> из обученных сетей (lossless NN → формула → Verilog), в отличие от приближённых методов (SHAP/LIME).</li>
-              <li>Результаты: parity-128 на <b>40 параметрах</b>; адаптер-копроцессор для GPT-2, поднимающий 8-битную арифметику с <b>0%→97% при 0.08% параметров</b>; ускорение инференса <b>FHE 131×</b>.</li>
+              <li>Результаты: рекуррентная булева ячейка на <b>40 параметрах</b> решает плотный parity-128 (100% на held-out, 5/5 сидов) там, где GRU остаётся на уровне случайности; точное извлечение <b>ANF → Verilog</b> со 100% совпадением формулы и модели; булев копроцессор в <b>0.08% параметров</b> даёт замороженному GPT-2 многоразрядное сложение, недоступное ему zero-shot.</li>
               <li>Строгая методология (multi-seed, поправка Бонферрони, 3 раунда верификации) с задокументированным логом опровергнутых гипотез.</li>
             </ul>
           </div>
@@ -609,7 +609,7 @@
             <div class="entry-meta">Autodirigido</div>
             <ul>
               <li>200+ experimentos sobre extracción de <b>lógica exacta y verificable</b> de redes entrenadas (NN → fórmula → Verilog sin pérdida), frente a métodos aproximados (SHAP/LIME).</li>
-              <li>Resultados destacados: parity-128 con <b>40 parámetros</b>; un adaptador-coprocesador para GPT-2 que eleva la aritmética de 8 bits de <b>0%→97% con el 0,08% de los parámetros</b>; aceleración de inferencia <b>131× bajo FHE</b>.</li>
+              <li>Resultados destacados: una celda booleana recurrente de <b>40 parámetros</b> resuelve parity-128 denso (100% en held-out, 5/5 semillas) donde un GRU se queda en el azar; extracción exacta <b>ANF → Verilog</b> con 100% de concordancia fórmula/modelo; un coprocesador booleano con el <b>0,08% de los parámetros</b> da a un GPT-2 congelado la suma multidígito que no puede hacer zero-shot.</li>
               <li>Metodología rigurosa (multi-seed, corrección de Bonferroni, 3 rondas de verificación) con un registro documentado de hipótesis refutadas.</li>
             </ul>
           </div>

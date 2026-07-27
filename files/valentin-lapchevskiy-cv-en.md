@@ -48,7 +48,7 @@ AI-native product engineer who ships full systems end-to-end — backend, fronte
 
 **Independent AI Research — Interpretability & Efficient Architectures** — Self-directed · 2025 – 2026
 - 200+ experiments on extracting **exact, verifiable logic** from trained networks (lossless NN → formula → Verilog), vs. approximate methods (SHAP/LIME).
-- Notable results: parity-128 in **40 parameters**; a GPT-2 reasoning-coprocessor adapter lifting 8-bit arithmetic from **0%→97% at 0.08% of parameters**; **131× FHE** inference speedup.
+- Notable results: a **40-parameter** recurrent Boolean cell solves dense parity-128 (100% held-out, 5/5 seeds) where a GRU baseline stays at chance; exact **ANF → Verilog** extraction with 100% model/formula agreement; a **0.08%-parameter** Boolean coprocessor gives a frozen GPT-2 multi-digit addition it cannot do zero-shot.
 - Rigorous methodology (multi-seed, Bonferroni correction, 3 verification rounds) with a documented falsified-hypotheses log.
 
 **GRAB-A-WORD-II — Real-time Multiplayer Word Game** — Founder / Solo Engineer · 2024

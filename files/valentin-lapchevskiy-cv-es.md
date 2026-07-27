@@ -48,7 +48,7 @@ Ingeniero de producto AI-native que entrega sistemas completos de extremo a extr
 
 **Investigación independiente en IA — interpretabilidad y arquitecturas eficientes** — Autodirigido · 2025 – 2026
 - 200+ experimentos sobre extracción de **lógica exacta y verificable** de redes entrenadas (NN → fórmula → Verilog sin pérdida), frente a métodos aproximados (SHAP/LIME).
-- Resultados destacados: parity-128 con **40 parámetros**; un adaptador-coprocesador para GPT-2 que eleva la aritmética de 8 bits de **0%→97% con el 0,08% de los parámetros**; aceleración de inferencia **131× bajo FHE**.
+- Resultados destacados: una celda booleana recurrente de **40 parámetros** resuelve parity-128 denso (100% en held-out, 5/5 semillas) donde un GRU se queda en el azar; extracción exacta **ANF → Verilog** con 100% de concordancia fórmula/modelo; un coprocesador booleano con el **0,08% de los parámetros** da a un GPT-2 congelado la suma multidígito que no puede hacer zero-shot.
 - Metodología rigurosa (multi-seed, corrección de Bonferroni, 3 rondas de verificación) con un registro documentado de hipótesis refutadas.
 
 **GRAB-A-WORD-II — Juego de palabras multijugador en tiempo real** — Fundador / Ingeniero en solitario · 2024
