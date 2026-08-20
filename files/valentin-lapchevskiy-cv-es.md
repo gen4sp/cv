@@ -11,11 +11,11 @@
 
 ## Resumen
 
-Ingeniero de producto AI-native que entrega sistemas completos de extremo a extremo — backend, frontend y la capa de agentes LLM — orquestando agentes de programación con el rendimiento de un equipo. 15 años construyendo productos: cofundador de **App in the Air** (7M usuarios, **Apple App of the Year**) y freelancer **Top-Rated** con **$300K+ en 61 proyectos** (~100% de éxito). Enfoque reciente: sistemas con agentes en producción, pipelines LLM multimodales e interpretabilidad de IA.
+Ingeniero de producto AI-native que entrega sistemas completos de extremo a extremo — backend, frontend y la capa de agentes LLM — orquestando agentes de programación con el rendimiento de un equipo. 15 años construyendo productos: cofundador de **App in the Air** (**7M+ descargas**, destacada por Apple) e ingeniero independiente, **Top Rated** en Upwork con **$300K+ en 61 proyectos** (~100% de éxito). Enfoque reciente: sistemas con agentes en producción, pipelines LLM multimodales e interpretabilidad de IA.
 
 ## Destacados
 
-- **7M** usuarios · Apple App of the Year
+- **7M+** descargas · destacada por Apple
 - **$300K+** · 61 proyectos · Top Rated
 - **5** sistemas de IA + investigación (2024–26)
 - Entrega agent-native
@@ -62,7 +62,8 @@ Ingeniero de producto AI-native que entrega sistemas completos de extremo a extr
 - 30+ MVPs y pruebas de concepto; participación profunda en decisiones de producto y asesoría técnica.
 
 **Cofundador · Ingeniero de producto y full-stack** — Empatika — App in the Air · 2011 – 2014
-- Cofundé una app de asistente de viajes: **7M usuarios, Apple App of the Year**, Editors' Choice, preinstalada en las Apple Store de todo el mundo.
+- Cofundé una app de asistente de viajes y dirigí el producto sus primeros tres años — pivote de un chat por geolocalización a la asistencia en aeropuertos y crecimiento de **0 → 600K usuarios** con menos de $15K de marketing.
+- Destacada por Apple — **Best New Apps en 120 países**, Editors' Choice, preinstalada en las Apple Store; hoy supera los **7M+ de descargas**.
 
 **Creative Technologist · Visual Programmer** — INTY · TNT Broadcast Network · 2008 – 2015
 - Instalaciones interactivas y sistemas visuales en tiempo real (TouchDesigner, Ventuz, GLSL, Arduino).

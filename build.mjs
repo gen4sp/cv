@@ -266,7 +266,7 @@ const OG_CARD = `<!doctype html><meta charset="utf-8">
   <div class="name">Valentin Lapchevskiy</div>
   <div class="title">AI-Native Product Engineer<br>full-stack + LLM / agent systems, end-to-end</div>
   <div class="facts">
-    <span>7M-user app · Apple App of the Year</span>
+    <span>7M+ installs · Apple-featured app</span>
     <span>$300K+ · Top Rated</span>
     <span>15 years building products</span>
   </div>

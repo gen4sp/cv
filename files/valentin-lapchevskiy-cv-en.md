@@ -11,11 +11,11 @@
 
 ## Summary
 
-AI-native product engineer who ships full systems end-to-end — backend, frontend, and the LLM-agent layer — by orchestrating AI coding agents at team-level throughput. 15 years building products: co-founder of **App in the Air** (7M users, **Apple App of the Year**) and a **Top-Rated** freelancer with **$300K+ across 61 projects** (~100% success). Recent focus: production agentic systems, multimodal LLM pipelines, and AI interpretability.
+AI-native product engineer who ships full systems end-to-end — backend, frontend, and the LLM-agent layer — by orchestrating AI coding agents at team-level throughput. 15 years building products: co-founder of **App in the Air** (**7M+ installs**, featured by Apple) and an independent engineer, **Top Rated** on Upwork with **$300K+ across 61 projects** (~100% success). Recent focus: production agentic systems, multimodal LLM pipelines, and AI interpretability.
 
 ## Highlights
 
-- **7M-user** app · Apple App of the Year
+- **7M+** installs · Apple-featured app
 - **$300K+** · 61 projects · Top Rated
 - **5** AI systems + research (2024–26)
 - Agent-native delivery
@@ -62,7 +62,8 @@ AI-native product engineer who ships full systems end-to-end — backend, fronte
 - 30+ MVPs and proofs-of-concept; deep involvement in product decisions and technical advising.
 
 **Co-founder · Product & Full-Stack Engineer** — Empatika — App in the Air · 2011 – 2014
-- Co-founded a travel-assistant app: **7M users, Apple App of the Year**, Editors' Choice, preinstalled across Apple Stores worldwide.
+- Co-founded a travel-assistant app and owned the product for its first three years — pivoted it from a location-based chat to airport travel assistance and grew it **0 → 600K users** on under $15K of marketing.
+- Featured by Apple — **Best New Apps in 120 countries**, Editors' Choice, preinstalled across Apple Stores; the app has since passed **7M+ installs**.
 
 **Creative Technologist · Visual Programmer** — INTY · TNT Broadcast Network · 2008 – 2015
 - Interactive installations and real-time visual systems (TouchDesigner, Ventuz, GLSL, Arduino).

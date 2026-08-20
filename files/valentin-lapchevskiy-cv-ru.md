@@ -11,11 +11,11 @@
 
 ## Кратко
 
-AI-native продуктовый инженер: собираю системы целиком — backend, frontend и LLM/агентный слой — оркестрируя кодинг-агентов с производительностью команды. 15 лет строю продукты: co-founder **App in the Air** (7M пользователей, **Apple App of the Year**) и **Top-Rated** фрилансер с **$300K+ за 61 проект** (~100% success). Текущий фокус: production-системы на LLM-агентах, мультимодальные LLM-пайплайны, интерпретируемость ИИ.
+AI-native продуктовый инженер: собираю системы целиком — backend, frontend и LLM/агентный слой — оркестрируя кодинг-агентов с производительностью команды. 15 лет строю продукты: co-founder **App in the Air** (**7M+ установок**, featured by Apple) и независимый инженер, **Top Rated** на Upwork с **$300K+ за 61 проект** (~100% success). Текущий фокус: production-системы на LLM-агентах, мультимодальные LLM-пайплайны, интерпретируемость ИИ.
 
 ## Главное
 
-- **7M** юзеров · Apple App of the Year
+- **7M+** установок · featured by Apple
 - **$300K+** · 61 проект · Top Rated
 - **5** AI-систем + research (2024–26)
 - Agent-native подход
@@ -62,7 +62,8 @@ AI-native продуктовый инженер: собираю системы �
 - 30+ MVP и proof-of-concept; глубокое участие в продуктовых решениях и техническом консультировании.
 
 **Co-founder · продукт и full-stack инженер** — Empatika — App in the Air · 2011 – 2014
-- Со-основал travel-ассистент: **7M пользователей, Apple App of the Year**, Editors' Choice, предустановка во всех Apple Store мира.
+- Со-основал travel-ассистент и три года вёл продукт — пивот с гео-чата на помощь в аэропортах, рост **0 → 600K пользователей** при маркетинге меньше $15K.
+- Featured by Apple — **Best New Apps в 120 странах**, Editors' Choice, предустановка в Apple Store; сегодня у приложения **7M+ установок**.
 
 **Creative Technologist · Visual Programmer** — INTY · TNT Broadcast Network · 2008 – 2015
 - Интерактивные инсталляции и real-time визуальные системы (TouchDesigner, Ventuz, GLSL, Arduino).
