@@ -251,14 +251,14 @@ const OG_CARD = `<!doctype html><meta charset="utf-8">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{width:1200px;height:630px;display:flex;align-items:center;gap:64px;padding:0 80px;
-    background:#fdfdfb;border-left:16px solid #0f766e;overflow:hidden;
+    background:#fdfdfb;border-left:16px solid #047857;overflow:hidden;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#17171b}
   .txt{flex:1}
   .name{font-size:66px;font-weight:760;letter-spacing:-.025em;line-height:1.02}
-  .title{margin-top:16px;font-size:29px;font-weight:640;color:#0f766e;line-height:1.3}
+  .title{margin-top:16px;font-size:29px;font-weight:640;color:#047857;line-height:1.3}
   .facts{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
-  .facts span{font-size:20px;font-weight:600;color:#3a3a44;background:rgba(15,118,110,.08);
-    border:1px solid rgba(15,118,110,.18);border-radius:999px;padding:9px 18px}
+  .facts span{font-size:20px;font-weight:600;color:#3a3a44;background:rgba(4,120,87,.08);
+    border:1px solid rgba(4,120,87,.18);border-radius:999px;padding:9px 18px}
   img{width:320px;height:320px;border-radius:50%;object-fit:cover;object-position:center 20%;
     border:3px solid #e6e6ea;flex:0 0 auto}
 </style>

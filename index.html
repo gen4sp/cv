@@ -73,7 +73,7 @@
 <style>
   /* THEME — change accent in ONE place. Presets: Teal #0f766e · Indigo #5b4bdb · Blue #1d4ed8 · Emerald #047857 · Amber #b45309 · Rose #be123c */
   :root{
-    --accent:#0f766e;--ink:#17171b;--muted:#5b5b66;--faint:#8a8a95;
+    --accent:#047857;--ink:#17171b;--muted:#5b5b66;--faint:#8a8a95;
     --paper:#fdfdfb;--rule:#e6e6ea;--chip:rgba(15,118,110,.08);--maxw:880px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -87,9 +87,9 @@
   .lang.active{display:block}
 
   /* Hero / id band (full width) */
-  .idband{display:grid;grid-template-columns:236px 1fr;gap:40px;align-items:start}
+  .idband{display:grid;grid-template-columns:250px 1fr;gap:40px;align-items:start}
   .photo-ph{width:96px;height:96px;border-radius:50%;background:var(--chip);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:760;font-size:30px;letter-spacing:.02em;flex:0 0 auto}
-  .photo{width:190px;height:190px;border-radius:50%;object-fit:cover;object-position:center 20%;border:1px solid var(--rule);justify-self:center;display:block;background:var(--chip)}
+  .photo{width:250px;height:250px;border-radius:50%;object-fit:cover;object-position:center 20%;border:1px solid var(--rule);justify-self:center;display:block;background:var(--chip)}
   .idbody{flex:1;min-width:260px}
   .idrow{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap}
   .idtext{flex:1;min-width:200px}
@@ -117,7 +117,7 @@
   .dl-menu a:hover .dl-note{color:var(--accent);opacity:.75}
 
   /* Two columns */
-  .cols{display:grid;grid-template-columns:236px 1fr;gap:40px;align-items:start;margin-top:30px}
+  .cols{display:grid;grid-template-columns:250px 1fr;gap:40px;align-items:start;margin-top:30px}
   .col-side{grid-column:1;grid-row:1}
   .col-main{grid-column:2;grid-row:1}
   .cols section{margin:0 0 24px}
@@ -173,11 +173,11 @@
     a{color:var(--ink);border:0}
     .controls,footer{display:none}
     .chip,.photo-ph{background:transparent}
-    .photo{width:112px;height:112px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .photo{width:147px;height:147px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     h2,.title,.sk-k{color:#000}
     li::before{background:#000}
-    .cols{grid-template-columns:196px 1fr;gap:22px;margin-top:18px}
-    .idband{grid-template-columns:196px 1fr;gap:22px}
+    .cols{grid-template-columns:205px 1fr;gap:22px;margin-top:18px}
+    .idband{grid-template-columns:205px 1fr;gap:22px}
     .cols section{margin-bottom:15px}
     .entry{margin-bottom:11px}
   }
@@ -189,7 +189,7 @@
   <!-- ==================== ENGLISH ==================== -->
   <div class="lang lang-en active" lang="en">
     <div class="idband">
-      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy — AI-Native Product Engineer" width="190" height="190" fetchpriority="high">
+      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy — AI-Native Product Engineer" width="250" height="250" fetchpriority="high">
       <div class="idbody">
         <div class="idrow">
           <div class="idtext">
@@ -360,7 +360,7 @@
   <!-- ==================== РУССКИЙ ==================== -->
   <div class="lang lang-ru" lang="ru" hidden>
     <div class="idband">
-      <img class="photo" src="photo.jpeg" alt="Валентин Лапчевский — AI-Native Product Engineer" width="190" height="190">
+      <img class="photo" src="photo.jpeg" alt="Валентин Лапчевский — AI-Native Product Engineer" width="250" height="250">
       <div class="idbody">
         <div class="idrow">
           <div class="idtext">
@@ -531,7 +531,7 @@
   <!-- ==================== ESPAÑOL ==================== -->
   <div class="lang lang-es" lang="es" hidden>
     <div class="idband">
-      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy — Ingeniero de producto AI-native" width="190" height="190">
+      <img class="photo" src="photo.jpeg" alt="Valentin Lapchevskiy — Ingeniero de producto AI-native" width="250" height="250">
       <div class="idbody">
         <div class="idrow">
           <div class="idtext">
