@@ -267,7 +267,7 @@ const OG_CARD = `<!doctype html><meta charset="utf-8">
   <div class="title">AI-Native Product Engineer<br>full-stack + LLM / agent systems, end-to-end</div>
   <div class="facts">
     <span>7M+ installs · Apple-featured app</span>
-    <span>$300K+ · Top Rated</span>
+    <span>61 Upwork projects · rated 4.9/5</span>
     <span>15 years building products</span>
   </div>
 </div>
